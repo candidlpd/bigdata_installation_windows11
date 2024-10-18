@@ -1,0 +1,244 @@
+    1  pwd
+    2  cd C:H:
+    3  pwd
+    4  cd /h
+    5  pwd
+    6  ls
+    7  git config --list
+    8  pwd
+    9  [200~git config --global user.name "Your Name"
+   10  git config --global user.name "LPD"
+   11  git config --global user.email "candidlpd@gmail.com"
+   12  git config --list
+   13  git config --global core.editor "notepad++"
+   14  cls
+   15  clear
+   16  git config --list
+   17  git config --global init.defaultBranch feature_lp
+   18  git config --global merge.tool kdiff3
+   19  git config --global core.autocrlf true
+   20  git config --global credential.username "candidlpd@gmail.com"
+   21  history
+   22  git config --get user.email
+   23  git config --list
+   24  git config --list --name-only
+   25  git config --list --show-origin
+   26  git config -l
+   27  git config --edit --global
+   28  clear
+   29  windget install notepad++
+   30  history
+   31  git config --global core.editor "notepad++"
+   32  git config --edit --global
+   33  git config --list --system
+   34  git config --system color.ui true
+   35  git config --edit --system
+   36  git config --global --list
+   37  git config --global user.name "LPD"
+   38  git config --global --edit
+   39  git config --local --list
+   40  git config --local core.ignorecase true
+   41  git config --local --edit
+   42  git config --list
+   43  git config --list --show-origin
+   44  history
+   45  git config --global --list
+   46  git config --local --list
+   47  git config --system --list
+   48  cat ~/.gitconfig
+   49  clear
+   50  git config --global --list
+   51  git config --global --get user.name
+   52  git config --global --get user.email
+   53  git config --global credential.helper
+   54  git config --global gui.recentrepo
+   55  git config --global -l
+   56  git config --global --list
+   57  git config --global --l | grep core
+   58  git config --global -l | grep core
+   59  git config --list
+   60  git config --global color.ui.auto
+   61  git config --global merge.conflictstyle diff3
+   62  git config --list
+   63  git config --global core.editor "code --wait"
+   64  ls
+   65  git init
+   66  ls
+   67  ls -a
+   68  ls -lrt
+   69  ls -ll
+   70  ls
+   71  cd vc
+   72  ls
+   73  mkdir complete_git_commands
+   74  pwd
+   75  ls
+   76  cd complete_git_commands/
+   77  ls
+   78  cd ..
+   79  ls
+   80  git branch feture_lp
+   81  git branch --list
+   82  git checkout -b feature_lp
+   83  git branch --a
+   84  git branch --list
+   85  ls
+   86  git add .
+   87  git rm --cached Machine-Learning-Samples
+   88  ls
+   89  git add complete_git_commands/
+   90  git commit -m "committing git commands to local repo"
+   91  history
+   92  git config --get remote.origin.url
+   93  git remote show origin
+   94  git config --global init.defaultBranch feature_lp
+   95  git init
+   96  ls
+   97  pwd
+   98  git add complete_git_commands/
+   99  git commit -m "initial commit"
+  100  git remote add origin https://github.com/candidlpd/git_winget_commands.git
+  101  git branch -M main
+  102  git push -u origin main
+  103  ls
+  104  cd complete_git_commands/
+  105  ls
+  106  git init
+  107  git add .
+  108  git commit -m "first commit"
+  109  git remote add origin https://github.com/candidlpd/git_winget_commands.git
+  110  git push origin feature_lp
+  111  git branch
+  112  git branch --list
+  113  git branch -a
+  114  history
+  115  history -w
+  116  pwd
+  117  cd H:\Docker
+  118  pwd
+  119  git clone https://github.com/candidlpd/Docker_all.git~
+  120  git config --global --list
+  121  git clone https://github.com/candidlpd/Docker_all.git
+  122  pwd
+  123  ls -lrt
+  124  pwd
+  125  cd ..
+  126  pwd
+  127  ls -lrt
+  128  cd spark_scala
+  129  pwd
+  130  git clone https://github.com/PacktPublishing/Data-Engineering-with-Scala-and-Spark.git
+  131  clear
+  132  ls -lrt
+  133  whoami
+  134  logname
+  135  hostname
+  136  date
+  137  al
+  138  cal
+  139  df -h
+  140  du -s -h /
+  141  clear
+  142  git --version
+  143  where git
+  144  ipconfig
+  145  ifconfig
+  146  clear
+  147  ipconfig
+  148  clear
+  149  df -h
+  150  pwd
+  151  cd ..
+  152  ls -lrt
+  153  cd Installation_steps
+  154  clear
+  155  pwd
+  156  git config --global --list
+  157  git init
+  158  ls -lrt
+  159  git clone https://github.com/candidlpd/bigdata_installation.git
+  160  ls -lrt
+  161  git remote -v
+  162  git branch --list
+  163  git branch --list
+  164  git add .
+  165  ls -lrt
+  166  git rm --cached bigdata_installation
+  167  ls -lrt
+  168  git rm -f bigdata_installation
+  169  rm -r bigdata_installation
+  170  ls -lrt
+  171  git log
+  172  git clean -fd
+  173  git fsck
+  174  clear
+  175  ls -lrt
+  176  whoami
+  177  git config --list
+  178  git config --global user.email
+  179  git config --global user.name
+  180  git branch
+  181  git branch --list
+  182  ls -lrt
+  183  mv big_data_installation-step /bigdata_installation
+  184  pwd
+  185  git mv bid_data_installation_step.txt bigdata_installation/
+  186  git mv big_data_installation_step.txt bigdata_installation/
+  187  ls -lrt
+  188  git commit -m "moved installation text files to folder"
+  189  git log
+  190  git push -u origin feature_lp
+  191  git log
+  192  git push -u origin feature_lp
+  193  git checkout feature_lp
+  194  git branch --list
+  195  git push -u origin feature_lp
+  196  ls -lrt
+  197  git add .
+  198  git commit -m " initial commit"
+  199  git log
+  200  git push -u origin feature_lp
+  201  git checkout -b feature_lp
+  202  git add .
+  203  git commit -m "again committed "
+  204  git push -u origin feature_lp
+  205  clear
+  206  git remote -v
+  207  git remote add origin https://github.com/candidlpd/bigdata_installation.git
+  208  git remote -v
+  209  git push -u origin feature_lp
+  210  git remote -v
+  211  git branch --list
+  212  get fetch origin
+  213  git fetch origin
+  214  git branch --list
+  215  git checkout -b master origin/master
+  216  git branch --list
+  217  git merge feature_lp
+  218  git add .
+  219  git commit -m "resolved merge conflicts"
+  220  git push origin master
+  221  git merge feature_lp
+  222  git merge feature_lp --allow-unrelated-histories
+  223  git branch --list
+  224  git checkout -b master
+  225  git merge feature_lp
+  226  git fetch origin
+  227  git checkout -b master origin/master
+  228  git merge feature_lp --allow-unrelated-histories
+  229  git add .
+  230  git commit -m "resolving conflicts
+"
+  231  git push origin master
+  232  history
+  233  history > history1.txt
+  234  pwd
+  235  ls -lrt
+  236  git add .
+  237  git commit -m "adding history of command"
+  238  gti checkout feature_lpl
+  239  gti checkout feature_lp
+  240  git checkout feature_lp
+  241  git branch --list
+  242  ls -lrt
+  243  history >history1.txt

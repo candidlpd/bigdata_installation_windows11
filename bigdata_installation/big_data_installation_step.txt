@@ -1,0 +1,129 @@
+
+
+===================================================================================================================================================================================================
+																			JAVA11 Instllment for spark 
+===================================================================================================================================================================================================
+
+====================
+Installation step
+
+
+--type jdk.java.net--->click on early access lated JDK 24 etc--->choose JavaSE 11 on left side ----->click on " Winodws/x64 Java Development Kit (sha256) 178.7 MB---> go to downloaded folder 
+----> choose and extract openjdk-11 by right click ---> copy jdk 11.00 under openjdk-11.0.0.1_windows-x64_bin ----> create Java folder under C:/Program Files/Java and paste jdk 11.00 under Java folder.
+
+
+====================================
+set up environment variable via cmd
+
+
+--setx JAVA_HOME "C:\Program Files\Java\jdk-11.0.0.1"
+
+
+=================================================
+check java path  for installation confirmation 
+
+
+--echo %JAVA_HOME%
+
+
+=======================
+set java bi path 
+
+
+--setx PATH "%PATH%;%JAVA_HOME%\bin"
+--exit
+--java -version
+--where java
+
+======================================
+admin command to uninstall java 8 
+
+
+--wmic product where "name like 'Java 8 Update%%'" call uninstall /nointeractive
+
+
+==========================================
+admin command to uninstall all versions of java
+
+
+--wmic product where "name like 'Java%%'" call uninstall /nointeractive
+
+
+
+===================================================================================================================================================================================================
+													Python
+================================================================================================================================================================================================
+
+--install latest python from "https://www.python.org/downloads/"  and downloaded as "python-3.12.4-amd64" and install it by clicking path as well. 
+--check cmd and type 
+--python --version
+--where python
+--echo %PATH%
+
+--setx 
+
+--go to environmental variables and path and add two paths in paths by adding new
+--C:\Users\lpdda\AppData\Local\Programs\Python\Python312\Scripts
+--C:\Users\lpdda\AppData\Local\Programs\Python\Python312
+
+
+=============================================================================================================================================================================================
+														Hadoop Winutils 
+=============================================================================================================================================================================================
+--https://github.com/steveloughran/winutils
+--go to cdarling/winutils  for current winutils by scrolling down in github page
+--download zip repository " https://github.com/cdarlint/winutils" 
+--Extract all and copy latest hadoop folder i.e. hadoop-3.3.6 and paste in c drive i.e. " C:\hadoop-3.3.6" 
+
+-----------------------------
+command to set hadoop in cmd 
+
+--setx HADOOP_HOMOE "C:\hadoop-3.3.6"
+
+--setx PATH "%PATH%;%HADOOP_HOMOE%\bin"  
+
+--( If it shows data being saved is truncated to 1024 characters, path environment vairiable is too long or not set properly)
+--To resolve above, go to advanced edit environmental variables, path , new and paste hadoop bin address i.e. "C:\hadoop-3.3.6\bin"
+
+
+
+========================================================================================================================================================================================================
+															Spark Installation
+=======================================================================================================================================================================================================
+
+--go to site " https://spark.apache.org/downloads.html" 
+--take most recent version of spark and hadoop both 
+--downlload  spark " spark-3.5.1-bin-hadoop3.tgz" 
+--uncompressed tgz file and and uncompressed tar file and  paste in c drive as "C:\spark-3.5.1-bin-hadoop3" 
+
+-------------------------------
+cmd 
+
+--setx SPARK_HOME "C:\spark-3.5.1-bin-hadoop3" 
+--setx PATH "%PATH%;%SPARK_HOMOE%\bin"
+
+-- ( If it shows data being saved is truncated to 1024 characters, path environment vairiable is too long or not set properly)
+--To resolve above, go to advanced edit environmental variables, path , new and paste hadoop bin address i.e. "C:\spark-3.5.1-bin-hadoop3\bin"
+
+
+
+-----------
+cmd 
+
+
+--pyspark 
+
+--setx PYTHONPATH "C:\spark-3.5.1-bin-hadoop3\python;C:\spark-3.5.1-bin-hadoop3\python\lib\py4j-0.10.9.7-src.zip"
+
+--where python
+
+--setx PYSPARK_PYTHON "C:\Users\lpdda\AppData\Local\Programs\Python\Python312\python.exe"
+
+
+
+
+=================================================================================================================================================================================================================
+																			Pycharm Installation
+==================================================================================================================================================================================================================
+--go to site and download community version  " https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows&code=PCC" 
+--download pycharm as "pycharm-community-2024.1.2"
