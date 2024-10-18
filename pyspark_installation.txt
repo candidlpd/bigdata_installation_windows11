@@ -1,0 +1,173 @@
+
+
+
+=======================java installation ======================================================
+--https://www.oracle.com/java/technologies/downloads/#java11
+--click on JAVA 11 near Java SE subscribers have more choices 
+--click on windows
+--click on jdk-11.0.25_windows-x64_bin.zip in x64 Compressed Archive
+--click right sign in I have read and acknowledge
+--Create free account in oracle and pass username email and password
+--downlaoded jdk-11.0.25_windows-x64_bin.zip stored in download folder
+--
+
+
+====python installation ==============================================================================
+--https://www.python.org/downloads/release/python-3110/
+--go to donwload
+--click latest versions e.g. 3.13.0
+
+
+--python installed location: C:/Users/lpdda/AppData/Local/Programs/Python ---> pyhton 310 and python 312 like folder seen
+--type %AppData% in searh bar, it will lead to this folder and look AppData/Local/Programs/Python and verified its location 
+
+--under system environmental variables, create new path and add below paths
+ 
+C:\Users\lpdda\AppData\Local\Programs\Python\Python311\
+C:\Users\lpdda\AppData\Local\Programs\Python\Python311\Scripts\
+
+--create variables below and pass values
+Variable name: 	PYSPARK_PYTHON
+Variable value: 	C:\Users\lpdda\AppData\Local\Programs\Python\Python311\python.exe
+
+
+--Create a virtual environment with a compatible Python version and install PySpark within it:
+
+python -m venv pyspark-env
+pyspark-env\Scripts\activate
+pip install pyspark
+pyspark
+
+
+================spark installation ================================================================
+--https://spark.apache.org/downloads.html
+--choose one lower version of spark
+--click on Download Spark: spark-3.4.3-bin-hadoop3.tgz
+--click on https://dlcdn.apache.org/spark/spark-3.4.3/spark-3.4.3-bin-hadoop3.tgz
+-- Create one folder in C drive named as spark
+--copy and paste spark.tgz file from downloads folder to c:/spark folder and unzip all under spark folder 
+--after unzipping copy all files and folders from folder spark-3.4.3-bin-hadoop3 to under spark folder 
+
+==================pyspark installation =============================================================
+C:\spark-3.5.1-bin-hadoop3\python
+C:\spark-3.5.1-bin-hadoop3\python\lib\py4j-0.10.9.7-src.zip
+
+
+
+
+
+==========================Hadoop winutils download====================================================
+--download winutils second latest Hadoop versions: https://github.com/cdarlint/winutils
+--create folder Hadoop in c drive and C:\hadoop and put bin of winutils 
+
+======================================edit in environmental variables============================================
+--go to environmental varialbes and edit under ==User varialbes for lpdda==
+
+Variale name:		HADOOP_HOME 
+Variable value:		C:\hadoop
+
+
+Variale name:		JAVA_HOME 
+Variable value:		C:\Program Files\Java\jdk-11.0.0.1
+
+Variale name:		SPARK_HOME
+Variable value:		C:\spark
+
+
+Variale name:		SPARK_LOCAL_HOSTNAME
+Variable value:		localhost
+=========================verification of java installation, versions and location================================================
+--usig command promt command 
+
+java --version
+echo %JAVA_HOME%
+where java 
+
+
+--using python 
+
+import subprocess
+
+def check_java_version():
+    try:
+        # Capture the output of the 'java -version' command
+        result = subprocess.run(['java', '-version'], capture_output=True, text=True, check=True)
+        
+        # Java version is printed to stderr, so we use stderr here
+        java_version = result.stderr.strip()
+        
+        # Use 'where' command on Windows or 'which' on Unix-like systems to find Java location
+        java_location = subprocess.run(['where', 'java'], capture_output=True, text=True, check=True).stdout.strip()
+        
+        # Print the results
+        print(f"Java Version: {java_version}")
+        print(f"Java Location: {java_location}")
+    except subprocess.CalledProcessError as e:
+        print(f"Error checking Java version: {e}")
+
+# Example call to the function
+check_java_version()
+
+
+====================================verification of Python version, location and installed ==========================
+===usig CMD
+python --version
+where python 
+where python*
+python -V
+
+=====using python
+def check_python_version():
+    python_version = sys.version
+    python_location = sys.executable
+    print(f"Python Version: {python_version}")
+    print(f"Python Location: {python_location}")
+    
+check_python_version()
+
+=========================verification of spark============================================
+
+spark-submit --versionpy
+where spark-submit
+spark-shell
+
+pyspark --version
+where pyspark
+
+echo %SPARK_HOME%
+
+
+=======using python
+os.getenv("SPARK_HOME")  
+
+
+def check_spark_version():
+    try:
+        from pyspark.sql import SparkSession
+        spark = SparkSession.builder.getOrCreate()
+        spark_version = spark.version
+        spark_location = os.path.dirname(spark.sparkContext._jvm.java.lang.System.getProperty("java.class.path"))
+        print(f"Spark Version: {spark_version}")
+        print(f"Spark Location: {spark_location}")
+    except Exception as e:
+        print(f"Error checking Spark version: {e}")
+        
+check_spark_version()
+
+
+def check_pyspark_version():
+    try:
+        import pyspark
+        
+        print(f"PySpark Version: {pyspark.__version__}")
+        print(f"PySpark Location: {pyspark.__file__}")
+    except ImportError as e:
+        print(f"Error checking PySpark version: {e}")
+        
+check_pyspark_version()
+
+
+
+
+
+
